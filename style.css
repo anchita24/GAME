@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding:0;
+    }
+    body{
+        overflow: hidden;
+    background-color: red;
+    }
+.gameContainer{
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    position: relative;;
+    width: 100%;
+    height: 100vh;
+} 
+.pika{
+    background-image: url(char2.png);
+    background-repeat: no-repeat;
+    background-size: contain; 
+            width: 200px; 
+            height: 200px;
+            position: absolute;
+            bottom: 0px;
+            left: 10px;
+}
+.obstacle{
+    background-image:url(char1.png);
+    background-size: cover;
+    width: 200px; 
+    height: 200px;
+    position:absolute;
+    bottom: 0px;
+    left: 44vw;
+    }
+    .animatePika {
+        animation: pika 0.6s linear;
+    }
+    .obstacleAni{
+        animation: obstacleAni 5s linear infinite;
+    }
+    .gameOver{
+        visibility: hidden;
+    }
+    @keyframes pika {
+        0% {
+            bottom: 0;
+        }
+        50% {
+            bottom: 422px;
+        }
+        100% {
+            bottom: 0;
+
+        }
+    }
+    @keyframes obstacleAni{
+        0%{
+            left: 100vw;
+        }
+        100%{
+            left: -10vw;
+        }
+    }
